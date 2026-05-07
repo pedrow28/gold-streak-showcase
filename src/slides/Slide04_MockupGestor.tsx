@@ -127,7 +127,7 @@ export default function Slide04_MockupGestor({ step, slideNumber, totalSlides }:
                   style={{ background: "rgba(232,163,61,0.15)", border: "1px solid rgba(232,163,61,0.4)" }}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <Instagram size={14} color="#E8A33D" />
+                  <Share2 size={14} color="#E8A33D" />
                   <span className="font-body text-gold" style={{ fontSize: 12, fontWeight: 600 }}>
                     Gerar post para o Instagram
                   </span>
