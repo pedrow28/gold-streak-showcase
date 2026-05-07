@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building2, Send, Instagram, School } from "lucide-react";
+import { Building2, Send, Share2, School } from "lucide-react";
 import { SlideShell } from "../components/SlideShell";
 import { RevealOnTrigger } from "../components/RevealOnTrigger";
 
