@@ -1,0 +1,61 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-soft: var(--navy-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-success: var(--success);
+  --color-alert: var(--alert);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+
+  --color-background: var(--navy);
+  --color-foreground: var(--text);
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-2xl: 1rem;
+}
+
+:root {
+  --navy: #0B1E3F;
+  --navy-deep: #061427;
+  --navy-soft: #15294D;
+  --gold: #E8A33D;
+  --gold-soft: rgba(232, 163, 61, 0.15);
+  --text: #FFFFFF;
+  --text-muted: #B8C5D9;
+  --text-subtle: #6B7A99;
+  --success: #4ADE80;
+  --alert: #F87171;
+  --chart-1: #E8A33D;
+  --chart-2: #5EAEF5;
+  --chart-3: #4ADE80;
+  --chart-4: #C084FC;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: var(--navy);
+    color: var(--text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+}
