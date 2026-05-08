@@ -1,4 +1,13 @@
-import { Area, AreaChart, CartesianGrid, ReferenceDot, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ReferenceDot,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import { SlideShell } from "../components/SlideShell";
 import { RevealOnTrigger } from "../components/RevealOnTrigger";
 import { PNCP_TIMELINE } from "../data/pncp";
@@ -8,19 +17,21 @@ type Props = { step: number; slideNumber: number; totalSlides: number };
 const blocos = [
   {
     n: "01",
-    headline: "O mercado de IA no setor público é real e está acelerando.",
+    headline: "O mercado é real e está acelerando.",
     subline:
-      "R$ 906 milhões já contratados. Curva de crescimento de 3,5x de 2024 para 2025. Não é hipótese — são informações públicas do PNCP.",
+      "R$ 906 milhões já contratados. Curva 3,5x em um ano. Não é hipótese — é dado público.",
   },
   {
     n: "02",
-    headline: "Hoje capturado por contratações de licenças, cursos e soluções para atividades jurídicas e licitações.",
-    subline: "Representantes de big techs, PRODs e outras empresas empresas já estabelecidas.",
+    headline: "Hoje, capturado por produtos genéricos.",
+    subline:
+      "Wrappers de ChatGPT, chatbots de prateleira, soluções fora do contexto público brasileiro.",
   },
   {
     n: "03",
-    headline: "Janela para ocupar o segmento focando em municípios pequenos e médios.",
-    subline: "Não possuem equipes de TI estruturadas e utilizam IA precariamente sem respeitar LGPD.",
+    headline: "Janela curta para ocupar o segmento certo.",
+    subline:
+      "Municípios pequenos e médios. Diagnóstico como cunha. Produtos verticalizados como motor.",
   },
 ];
 
@@ -44,32 +55,43 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: any[] 
 
 export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) {
   return (
-    <SlideShell step={step} slideNumber={slideNumber} totalSlides={totalSlides} caption="01 — A TESE">
-      <div className="grid h-full" style={{ gridTemplateColumns: "54% 46%", gap: 56, marginTop: 8 }}>
+    <SlideShell
+      step={step}
+      slideNumber={slideNumber}
+      totalSlides={totalSlides}
+      caption="01 — A TESE"
+    >
+      <div className="grid h-full" style={{ gridTemplateColumns: "52% 48%", gap: 56, marginTop: 16 }}>
         {/* LEFT — Tese */}
         <div className="flex flex-col h-full">
           <h2
             className="font-display text-text"
-            style={{ fontSize: 56, fontWeight: 600, lineHeight: 1.04, marginBottom: 32 }}
+            style={{ fontSize: 52, fontWeight: 600, lineHeight: 1.05, marginBottom: 36 }}
           >
-            A nossa tese em três movimentos.
+            A nossa tese, em três movimentos.
           </h2>
 
-          <div className="flex flex-col justify-between flex-1 gap-6">
+          <div className="flex flex-col gap-7 flex-1">
             {blocos.map((b, i) => (
               <RevealOnTrigger key={b.n} step={i + 1}>
                 <div className="flex items-start gap-7">
                   <div
                     className="font-display text-gold shrink-0"
-                    style={{ fontSize: 52, fontWeight: 600, lineHeight: 1, width: 80 }}
+                    style={{ fontSize: 44, fontWeight: 600, lineHeight: 1, width: 70 }}
                   >
                     {b.n}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-text" style={{ fontSize: 28, fontWeight: 600, lineHeight: 1.22 }}>
+                    <h3
+                      className="font-display text-text"
+                      style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.2 }}
+                    >
                       {b.headline}
                     </h3>
-                    <p className="font-body text-text-muted mt-3" style={{ fontSize: 18, lineHeight: 1.5 }}>
+                    <p
+                      className="font-body text-text-muted mt-2"
+                      style={{ fontSize: 17, lineHeight: 1.5 }}
+                    >
                       {b.subline}
                     </p>
                   </div>
@@ -78,7 +100,14 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             ))}
           </div>
 
-          {/* Removido texto inferior para liberar espaço */}
+          <RevealOnTrigger step={3}>
+            <p
+              className="font-body italic text-gold mt-6"
+              style={{ fontSize: 15 }}
+            >
+              IA é a nova infraestrutura cognitiva do setor público brasileiro.
+            </p>
+          </RevealOnTrigger>
         </div>
 
         {/* RIGHT — Curva */}
@@ -91,21 +120,24 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
           </div>
           <h3
             className="font-display text-text mt-2"
-            style={{ fontSize: 64, fontWeight: 700, lineHeight: 1, letterSpacing: "-1px" }}
+            style={{ fontSize: 56, fontWeight: 700, lineHeight: 1, letterSpacing: "-1px" }}
           >
-            R$ 906 milhões
+            R$ 906 mi
           </h3>
-          <p className="font-body text-text-muted mt-3" style={{ fontSize: 17, lineHeight: 1.45 }}>
+          <p className="font-body text-text-muted mt-2" style={{ fontSize: 16, lineHeight: 1.4 }}>
             em contratos de IA já firmados com a administração pública brasileira.
             <br />
-            <span className="text-text-subtle">790 contratos · 310 órgãos públicos</span>
+            <span className="text-text-subtle">790 contratos · 310 municípios · curva 3,5x em 2025</span>
           </p>
 
-          <div className="flex-1 mt-5 relative min-h-0">
+          <div className="flex-1 mt-6 relative">
             <RevealOnTrigger step={1} duration={0.4}>
-              <div style={{ width: "100%", height: "100%", minHeight: 420 }}>
+              <div style={{ width: "100%", height: 360 }}>
                 <ResponsiveContainer>
-                  <AreaChart data={PNCP_TIMELINE as any} margin={{ top: 20, right: 20, left: 0, bottom: 10 }}>
+                  <AreaChart
+                    data={PNCP_TIMELINE as any}
+                    margin={{ top: 20, right: 20, left: 0, bottom: 10 }}
+                  >
                     <defs>
                       <linearGradient id="goldGradTese" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#E8A33D" stopOpacity={0.7} />
@@ -172,7 +204,10 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             </RevealOnTrigger>
           </div>
 
-          <p className="font-body text-text-subtle uppercase mt-2" style={{ fontSize: 11, letterSpacing: "0.1em" }}>
+          <p
+            className="font-body text-text-subtle uppercase mt-2"
+            style={{ fontSize: 11, letterSpacing: "0.1em" }}
+          >
             Fonte: PNCP, extração própria, abril 2026 · 2026 = projeção
           </p>
         </div>
