@@ -122,7 +122,7 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             className="font-display text-text mt-2"
             style={{ fontSize: 56, fontWeight: 700, lineHeight: 1, letterSpacing: "-1px" }}
           >
-            R$ 906 mi
+            R$ 906 milhões
           </h3>
           <p className="font-body text-text-muted mt-2" style={{ fontSize: 16, lineHeight: 1.4 }}>
             em contratos de IA já firmados com a administração pública brasileira.
