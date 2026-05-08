@@ -52,7 +52,7 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             className="font-display text-text"
             style={{ fontSize: 56, fontWeight: 600, lineHeight: 1.04, marginBottom: 32 }}
           >
-            A nossa tese, em três movimentos.
+            A nossa tese em três movimentos.
           </h2>
 
           <div className="flex flex-col justify-between flex-1 gap-6">
