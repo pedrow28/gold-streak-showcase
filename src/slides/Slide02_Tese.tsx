@@ -45,31 +45,31 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: any[] 
 export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) {
   return (
     <SlideShell step={step} slideNumber={slideNumber} totalSlides={totalSlides} caption="01 — A TESE">
-      <div className="grid h-full" style={{ gridTemplateColumns: "52% 48%", gap: 56, marginTop: 16 }}>
+      <div className="grid h-full" style={{ gridTemplateColumns: "54% 46%", gap: 56, marginTop: 8 }}>
         {/* LEFT — Tese */}
         <div className="flex flex-col h-full">
           <h2
             className="font-display text-text"
-            style={{ fontSize: 52, fontWeight: 600, lineHeight: 1.05, marginBottom: 36 }}
+            style={{ fontSize: 56, fontWeight: 600, lineHeight: 1.04, marginBottom: 32 }}
           >
             A nossa tese, em três movimentos.
           </h2>
 
-          <div className="flex flex-col gap-7 flex-1">
+          <div className="flex flex-col justify-between flex-1 gap-6">
             {blocos.map((b, i) => (
               <RevealOnTrigger key={b.n} step={i + 1}>
                 <div className="flex items-start gap-7">
                   <div
                     className="font-display text-gold shrink-0"
-                    style={{ fontSize: 44, fontWeight: 600, lineHeight: 1, width: 70 }}
+                    style={{ fontSize: 52, fontWeight: 600, lineHeight: 1, width: 80 }}
                   >
                     {b.n}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-text" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.2 }}>
+                    <h3 className="font-display text-text" style={{ fontSize: 28, fontWeight: 600, lineHeight: 1.22 }}>
                       {b.headline}
                     </h3>
-                    <p className="font-body text-text-muted mt-2" style={{ fontSize: 17, lineHeight: 1.5 }}>
+                    <p className="font-body text-text-muted mt-3" style={{ fontSize: 18, lineHeight: 1.5 }}>
                       {b.subline}
                     </p>
                   </div>
@@ -79,7 +79,7 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
           </div>
 
           <RevealOnTrigger step={3}>
-            <p className="font-body italic text-gold mt-6" style={{ fontSize: 15 }}>
+            <p className="font-body italic text-gold mt-8 pt-5 border-t border-navy-light" style={{ fontSize: 16 }}>
               IA é a nova infraestrutura cognitiva do setor público brasileiro.
             </p>
           </RevealOnTrigger>
@@ -95,19 +95,19 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
           </div>
           <h3
             className="font-display text-text mt-2"
-            style={{ fontSize: 56, fontWeight: 700, lineHeight: 1, letterSpacing: "-1px" }}
+            style={{ fontSize: 64, fontWeight: 700, lineHeight: 1, letterSpacing: "-1px" }}
           >
             R$ 906 mi
           </h3>
-          <p className="font-body text-text-muted mt-2" style={{ fontSize: 16, lineHeight: 1.4 }}>
+          <p className="font-body text-text-muted mt-3" style={{ fontSize: 17, lineHeight: 1.45 }}>
             em contratos de IA já firmados com a administração pública brasileira.
             <br />
             <span className="text-text-subtle">790 contratos · 310 municípios · curva 3,5x em 2025</span>
           </p>
 
-          <div className="flex-1 mt-6 relative">
+          <div className="flex-1 mt-5 relative min-h-0">
             <RevealOnTrigger step={1} duration={0.4}>
-              <div style={{ width: "100%", height: 360 }}>
+              <div style={{ width: "100%", height: "100%", minHeight: 420 }}>
                 <ResponsiveContainer>
                   <AreaChart data={PNCP_TIMELINE as any} margin={{ top: 20, right: 20, left: 0, bottom: 10 }}>
                     <defs>
