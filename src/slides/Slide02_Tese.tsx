@@ -68,31 +68,31 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
         <div className="flex flex-col h-full">
           <h2
             className="font-display text-text"
-            style={{ fontSize: 52, fontWeight: 600, lineHeight: 1.05, marginBottom: 36 }}
+            style={{ fontSize: 60, fontWeight: 600, lineHeight: 1.05, marginBottom: 48 }}
           >
             A nossa tese em três movimentos.
           </h2>
 
-          <div className="flex flex-col gap-7 flex-1">
+          <div className="flex flex-col justify-between flex-1">
             {blocos.map((b, i) => (
               <RevealOnTrigger key={b.n} step={i + 1}>
-                <div className="flex items-start gap-7">
+                <div className="flex items-start gap-8">
                   <div
                     className="font-display text-gold shrink-0"
-                    style={{ fontSize: 44, fontWeight: 600, lineHeight: 1, width: 70 }}
+                    style={{ fontSize: 56, fontWeight: 600, lineHeight: 1, width: 88 }}
                   >
                     {b.n}
                   </div>
                   <div className="flex-1">
                     <h3
                       className="font-display text-text"
-                      style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.2 }}
+                      style={{ fontSize: 30, fontWeight: 600, lineHeight: 1.2 }}
                     >
                       {b.headline}
                     </h3>
                     <p
-                      className="font-body text-text-muted mt-2"
-                      style={{ fontSize: 17, lineHeight: 1.5 }}
+                      className="font-body text-text-muted mt-3"
+                      style={{ fontSize: 20, lineHeight: 1.5 }}
                     >
                       {b.subline}
                     </p>
@@ -101,15 +101,6 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
               </RevealOnTrigger>
             ))}
           </div>
-
-          <RevealOnTrigger step={3}>
-            <p
-              className="font-body italic text-gold mt-6"
-              style={{ fontSize: 15 }}
-            >
-              IA é a nova infraestrutura cognitiva do setor público brasileiro.
-            </p>
-          </RevealOnTrigger>
         </div>
 
         {/* RIGHT — Curva */}
