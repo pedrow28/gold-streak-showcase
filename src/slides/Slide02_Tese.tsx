@@ -132,9 +132,9 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             <span className="text-text-subtle">790 contratos · 310 órgãos públicos</span>
           </p>
 
-          <div className="flex-1 mt-6 relative min-h-0">
+          <div className="flex-1 mt-8 relative">
             <RevealOnTrigger step={1} duration={0.4}>
-              <div style={{ width: "100%", height: "100%", minHeight: 480 }}>
+              <div style={{ width: "100%", height: 540 }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart
                     data={PNCP_TIMELINE as any}
