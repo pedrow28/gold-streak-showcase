@@ -17,7 +17,7 @@ type Props = { step: number; slideNumber: number; totalSlides: number };
 const blocos = [
   {
     n: "01",
-    headline: "O mercado é real e está acelerando.",
+    headline: "Não possuem equipes de TI estruturadas e utilizam IA precariamente sem respeitar LGPD.",
     subline:
       "R$ 906 milhões já contratados. Curva 3,5x em um ano. Não é hipótese — é dado público.",
   },
