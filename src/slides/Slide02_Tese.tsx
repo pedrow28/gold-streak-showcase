@@ -78,11 +78,7 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             ))}
           </div>
 
-          <RevealOnTrigger step={3}>
-            <p className="font-body italic text-gold mt-8 pt-5 border-t border-navy-light" style={{ fontSize: 16 }}>
-              IA é a nova infraestrutura cognitiva do setor público brasileiro.
-            </p>
-          </RevealOnTrigger>
+          {/* Removido texto inferior para liberar espaço */}
         </div>
 
         {/* RIGHT — Curva */}
