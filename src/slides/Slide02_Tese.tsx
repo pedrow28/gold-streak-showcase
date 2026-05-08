@@ -116,26 +116,26 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
         <div className="flex flex-col h-full">
           <div
             className="font-body uppercase text-gold"
-            style={{ fontSize: 12, letterSpacing: "0.15em", fontWeight: 700 }}
+            style={{ fontSize: 14, letterSpacing: "0.18em", fontWeight: 700 }}
           >
             O mercado em números
           </div>
           <h3
-            className="font-display text-text mt-2"
-            style={{ fontSize: 56, fontWeight: 700, lineHeight: 1, letterSpacing: "-1px" }}
+            className="font-display text-text mt-3"
+            style={{ fontSize: 84, fontWeight: 700, lineHeight: 1, letterSpacing: "-2px" }}
           >
-            R$ 906 mi
+            R$ 906 milhões
           </h3>
-          <p className="font-body text-text-muted mt-2" style={{ fontSize: 16, lineHeight: 1.4 }}>
+          <p className="font-body text-text-muted mt-3" style={{ fontSize: 18, lineHeight: 1.45 }}>
             em contratos de IA já firmados com a administração pública brasileira.
             <br />
-            <span className="text-text-subtle">790 contratos · 310 municípios · curva 3,5x em 2025</span>
+            <span className="text-text-subtle">790 contratos · 310 órgãos públicos</span>
           </p>
 
-          <div className="flex-1 mt-6 relative">
+          <div className="flex-1 mt-6 relative min-h-0">
             <RevealOnTrigger step={1} duration={0.4}>
-              <div style={{ width: "100%", height: 360 }}>
-                <ResponsiveContainer>
+              <div style={{ width: "100%", height: "100%", minHeight: 480 }}>
+                <ResponsiveContainer width="100%" height="100%">
                   <AreaChart
                     data={PNCP_TIMELINE as any}
                     margin={{ top: 20, right: 20, left: 0, bottom: 10 }}
@@ -205,13 +205,6 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
               </div>
             </RevealOnTrigger>
           </div>
-
-          <p
-            className="font-body text-text-subtle uppercase mt-2"
-            style={{ fontSize: 11, letterSpacing: "0.1em" }}
-          >
-            Fonte: PNCP, extração própria, abril 2026 · 2026 = projeção
-          </p>
         </div>
       </div>
     </SlideShell>
