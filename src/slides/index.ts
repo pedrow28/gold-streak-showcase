@@ -19,7 +19,7 @@ export type SlideEntry = {
 export const SLIDES: SlideEntry[] = [
   { id: "01_tese", component: Slide02_Tese, steps: 4 },
   { id: "02_concorrentes", component: Slide02_Concorrentes, steps: 5 },
-  { id: "03_oportunidades", component: Slide03_Oportunidades, steps: 3 },
+  { id: "03_oportunidades", component: Slide03_Oportunidades, steps: 4 },
   { id: "04_mockup_gestor", component: Slide04_MockupGestor, steps: 4 },
   { id: "05_mockup_saude", component: Slide05_MockupSaude, steps: 4 },
   { id: "06_mockup_turismo", component: Slide06_MockupTurismo, steps: 4 },
