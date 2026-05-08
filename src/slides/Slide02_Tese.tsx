@@ -68,7 +68,7 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
             className="font-display text-text"
             style={{ fontSize: 52, fontWeight: 600, lineHeight: 1.05, marginBottom: 36 }}
           >
-            R$ 906 milhões
+            A nossa tese em três movimentos.
           </h2>
 
           <div className="flex flex-col gap-7 flex-1">
