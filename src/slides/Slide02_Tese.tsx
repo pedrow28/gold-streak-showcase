@@ -17,21 +17,23 @@ type Props = { step: number; slideNumber: number; totalSlides: number };
 const blocos = [
   {
     n: "01",
-    headline: "O mercado é real e está acelerando.",
+    headline: "O mercado de IA no setor público é real e está acelerando.",
     subline:
-      "R$ 906 milhões já contratados. Curva 3,5x em um ano. Não é hipótese — é dado público.",
+      "R$ 906 milhões já contratados. Curva 3,5x em um ano. Não é hipótese — são informações públicas do PNCP.",
   },
   {
     n: "02",
-    headline: "Hoje, capturado por produtos genéricos.",
+    headline:
+      "Hoje capturado por contratações de licenças, cursos e soluções para atividades jurídicas e licitações.",
     subline:
-      "Wrappers de ChatGPT, chatbots de prateleira, soluções fora do contexto público brasileiro.",
+      "Representantes de big techs, PRODs e outras empresas já estabelecidas.",
   },
   {
     n: "03",
-    headline: "Janela curta para ocupar o segmento certo.",
+    headline:
+      "Janela para ocupar o segmento focando em municípios pequenos e médios.",
     subline:
-      "Municípios pequenos e médios. Diagnóstico como cunha. Produtos verticalizados como motor.",
+      "Não possuem equipes de TI estruturadas e utilizam IA precariamente sem respeitar LGPD.",
   },
 ];
 
