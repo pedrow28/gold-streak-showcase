@@ -98,7 +98,7 @@ export default function Slide02_Tese({ step, slideNumber, totalSlides }: Props) 
           <p className="font-body text-text-muted mt-3" style={{ fontSize: 17, lineHeight: 1.45 }}>
             em contratos de IA já firmados com a administração pública brasileira.
             <br />
-            <span className="text-text-subtle">790 contratos · 310 municípios</span>
+            <span className="text-text-subtle">790 contratos · 310 órgãos públicos</span>
           </p>
 
           <div className="flex-1 mt-5 relative min-h-0">
